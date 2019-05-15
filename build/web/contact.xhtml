@@ -1,0 +1,65 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml"   
+      xmlns:ui = "http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+<body>
+            <ui:composition template="common.xhtml">	
+                <ui:define name="player"> </ui:define>
+    		<ui:define name="content">
+                    <div class="section group">				
+		<div class="col span_1_of_3">
+			<div class="contact_info">
+	
+				
+      		</div>
+      		<div class="company_address">
+			  	
+			</div>
+		</div>				
+		<div class="col col1 span_2_of_4">
+			  <div class="contact-form">
+			  	<h3>Contact Us</h3>
+                                    
+				    <h:form>
+				    	<div>
+					    	<span><label>NAME</label></span>
+					    	
+                                                <h:inputText id="name" value="#{contact.name}"
+                            required="true" requiredMessage="Please enter your email id" />
+					    </div>
+					    <div>
+					    	<span><label>E-MAIL</label></span>
+					    	
+                                                <h:inputText id="email" value="#{contact.email}"
+                            required="true" requiredMessage="Please enter your email id" />
+					    </div>
+					    <div>
+					    	<span><label>SUBJECT</label></span>
+					    	
+                                                    <h:inputTextarea id="subject" value="#{contact.subject}"
+                            required="true" requiredMessage="Please enter your email id" />
+					    </div>
+					   <div>
+					   		<h:commandButton value="Send" action="#{contact.add}" />
+					  </div>
+	     	    </h:form>
+		    </div>
+  		</div>				
+</div>
+
+    		</ui:define>
+    	</ui:composition>
+
+
+
+
+
+</body>
+</html>

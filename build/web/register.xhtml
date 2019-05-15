@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<head>
+    <title>Register to Mpotify!</title>
+    <style type="text/css">
+    #wrapper {
+        width:450px;
+        margin:0 auto;
+        font-family:Verdana, sans-serif;
+    }
+    legend {
+        color:#0481b1;
+        font-size:16px;
+        padding:0 10px;
+        background:#fff;
+        -moz-border-radius:4px;
+        box-shadow: 0 1px 5px rgba(4, 129, 177, 0.5);
+        padding:5px 10px;
+        text-transform:uppercase;
+        font-family:Helvetica, sans-serif;
+        font-weight:bold;
+    }
+    fieldset {
+        border-radius:4px;
+        background: #fff; 
+        background: -moz-linear-gradient(#fff, #f9fdff);
+        background: -o-linear-gradient(#fff, #f9fdff);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#f9fdff)); 
+        background: -webkit-linear-gradient(#fff, #f9fdff);
+        padding:20px;
+        border-color:rgba(4, 129, 177, 0.4);
+    }
+    input,
+    textarea {
+        color: #373737;
+        background: #fff;
+        border: 1px solid #CCCCCC;
+        color: #aaa;
+        font-size: 14px;
+        line-height: 1.2em;
+        margin-bottom:15px;
+
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        border-radius:4px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+    input[type="text"],
+    input[type="password"]{
+        padding: 8px 6px;
+        height: 22px;
+        width:280px;
+    }
+
+    input[type="submit"]{
+        background: #222;
+        border: none;
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+        text-transform:uppercase;
+        color: #eee;
+        cursor: pointer;
+        font-size: 15px;
+        margin: 5px 0;
+        padding: 5px 22px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-border-radius:4px;
+        -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+        box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+    }
+    textarea {
+        padding:3px;
+        width:96%;
+        height:100px;
+    }
+    textarea:focus {
+        background:#ebf8fd;
+        text-indent: 0;
+        z-index: 1;
+        color: #373737;
+        opacity:0.6;
+        box-shadow:0 0 5px rgba(4, 129, 177, 0.5);
+        border-color:#ccc;
+    }
+    .small {
+        line-height:14px;
+        font-size:12px;
+        color:#999898;
+        margin-bottom:3px;
+    }
+</style>
+</head>
+
+<body style="background-color:blueviolet; background-image:url(images/registerfurkan.jpg); background-size: cover">
+    <div id="wrapper">
+        <br></br>
+        <br></br><br></br>
+        <br></br><br></br><br></br><br></br><br></br> <br></br><br></br><br></br><br></br><br></br> 
+           <h:form id="registerForm">
+         
+            <table>
+                 <tr>
+                    <td><h:outputText value="First Name: " style="color:floralwhite;"/></td>
+                    <td><h:inputText id="fname" value="#{user.firstName}"
+                            required="true" requiredMessage="Please enter your first name" /></td>
+                    <td><h:message for="fname" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Last Name: " style="color:floralwhite;"/></td>
+                    <td><h:inputText id="lname" value="#{user.lastName}"
+                            required="true" requiredMessage="Please enter your last name" /></td>
+                    <td><h:message for="lname" style="color:red" /></td>
+                </tr>
+                                <tr>
+                                    <td><h:outputText value="Username: " style="color:floralwhite;"/></td>
+                    <td><h:inputText id="uname" value="#{user.username}"
+                            required="true" /></td>
+                    <td><h:message for="email" style="color:red" /></td>
+                </tr>
+                                <tr>
+                    <td><h:outputText value="Password: " style="color:floralwhite;"/></td>
+                    <td><h:inputSecret id="psw" value="#{user.password}"
+                            required="true" requiredMessage="Please enter your password" /></td>
+                    <td><h:message for="psw" style="color:red" /></td>
+                </tr>
+               
+
+
+                <tr>
+                    <td />
+                    <td><h:commandButton value="Register" action="#{user.add}" /></td>
+                </tr>
+            </table>
+                   
+        </h:form>
+        
+    </div>
+</body>
+</html>

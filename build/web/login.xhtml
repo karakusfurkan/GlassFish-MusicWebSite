@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<title>Login to Mpotify!</title>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" type="text/css" href="css/util.css"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+</h:head>
+    <h:body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-b-160 p-t-50">
+				<h:form class="login100-form validate-form">
+					<span class="login100-form-title p-b-43">
+						Welcome To Mpotify
+					</span>
+					
+					<div class="wrap-input100 rs1 validate-input" data-validate = "Username is required">
+                                            <h:inputText id="username" value="#{login.user}" class="input100"></h:inputText>
+		<h:message for="username"></h:message>
+						<span class="label-input100">Username</span>
+					</div>
+					
+					
+					<div class="wrap-input100 rs2 validate-input" data-validate="Password is required">
+                                            <h:inputSecret id="password" value="#{login.pwd}" class="input100"></h:inputSecret>
+		<h:message for="password"></h:message>
+						<span class="label-input100">Password</span>
+					</div>
+
+					<div class="container-login100-form-btn">
+                                            <h:commandButton action="#{login.validateUsernamePassword}"
+			value="Login" class="login100-form-btn"></h:commandButton>
+		
+					</div>
+					
+					<div class="text-center w-full p-t-23">
+						<a href="register.xhtml" class="txt1">
+							You still not registered?
+						</a>
+					</div>
+				</h:form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</h:body>
+</html>

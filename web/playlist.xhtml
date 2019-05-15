@@ -1,0 +1,41 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml"   
+      xmlns:ui = "http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="common.xhtml">	
+    		<ui:define name="content">
+    			<h2>Playlist</h2>
+                                                     
+                        <ui:repeat value="#{playlist.getSongsFromPlaylist()}" var="s">
+                                                        <div class="grid_1_of_3 images_1_of_3">
+                                                            <h:link>
+                                                                <h3>#{s.title}</h3>
+                                                                <img src="images/#{s.imagefile}" alt=""/>
+                                                                <f:param name="songid" value="#{s.id}" />
+                                                            </h:link>
+                                                            
+                                                            <h:form>
+                                                                
+                                                            <h:commandLink action="#{playlist.addSong(s.id)}" class="buttonadd">
+                                                               <h:outputText value="Add to playlist"></h:outputText>  
+                                                            </h:commandLink><br></br>
+                                                                <h:commandLink action="#{playlist.removeSong(s.playlistid)}" class="buttonremove">
+                                                               <h:outputText value="Remove from playlist"></h:outputText>  
+                                                            </h:commandLink>
+                                                            </h:form>
+                                                            
+                                                        </div>
+                                                    </ui:repeat>
+    		</ui:define>
+    	</ui:composition>
+    	
+    </h:body>
+</html>

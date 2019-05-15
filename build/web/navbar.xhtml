@@ -1,0 +1,65 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml"   
+      xmlns:ui = "http://java.sun.com/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+   
+   <body>
+      <ui:composition> 
+                 	<div class="menu-bg">
+		<div class="wrap">
+			<div class="menu">
+  
+         <ul class="nav">
+             
+                     <div class="logo">
+					<a href="index.xhtml">
+                                            <img src="images/logo.png" alt="" title="logo" style="max-height: 52px; max-width: 52px"/>
+					</a>
+                     </div>
+					<li class="#{view.viewId eq '/index.xhtml' ? 'active' : ''}">
+						<a href="index.xhtml">Home</a>
+					</li>
+					<li class="#{view.viewId eq '/artists.xhtml' ? 'active' : ''}">
+						<a href="artists.xhtml?page=1">Artists</a>
+					</li >
+                                        <li class="#{view.viewId eq '/albums.xhtml' ? 'active' : ''}">
+						<a href="albums.xhtml">Albums</a>
+					</li >
+                                        <li class="#{view.viewId eq '/playlist.xhtml' ? 'active' : ''}">
+						<a href="playlist.xhtml">My Playlist</a>
+					</li >
+                                        <li class="#{view.viewId eq '/contact.xhtml' ? 'active' : ''}">
+						<a href="contact.xhtml">Contact</a>
+					</li >
+                                        
+                     
+                                       
+                                        
+	</ul>
+                          <div style="float: right">
+                    <div style="float: left; margin-right: 320px">
+                                   
+                                            <h:form>
+                                <h:inputText value="#{search.searchText}" class="search"></h:inputText>
+                                <h:commandButton value="Search" action="#{search.doSearch()}" class="searchbutton"/>
+                            </h:form>
+                                
+                                        </div>  
+                            <div style="float: right">
+                                  
+                                <ul class="nav"><li> <p style="color: floralwhite; font-size: 18px; margin-right: 10px;">#{login.firstName} <br></br>#{login.lastName}</p></li>
+                                 <li><h:form> <h:commandLink action="#{login.logout}" value="Logout" style="color: red"></h:commandLink></h:form></li></ul>
+                             
+                                        </div>      
+                          </div>
+                        </div>
+			<div class="clear"></div>
+                        
+		</div>
+	</div>
+      </ui:composition>	
+   </body>
+</html>

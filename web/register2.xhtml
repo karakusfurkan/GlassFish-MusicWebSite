@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>Registration Page</title>
+</h:head>
+<h:body>
+    <f:view>
+        <h:form id="registerForm">
+            <table>
+                                <tr>
+                    <td><h:outputText value="Username: " /></td>
+                    <td><h:inputText id="uname" value="#{user.username}"
+                            required="true" requiredMessage="Please enter your email id" /></td>
+                    <td><h:message for="email" style="color:red" /></td>
+                </tr>
+                                <tr>
+                    <td><h:outputText value="Password: " /></td>
+                    <td><h:inputSecret id="psw" value="#{user.password}"
+                            required="true" requiredMessage="Please enter your password" /></td>
+                    <td><h:message for="psw" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Name: " /></td>
+                    <td><h:inputText id="fname" value="#{user.firstName}"
+                            required="true" requiredMessage="Please enter your first name" /></td>
+                    <td><h:message for="fname" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Last Name: " /></td>
+                    <td><h:inputText id="lname" value="#{user.lastName}"
+                            required="true" requiredMessage="Please enter your last name" /></td>
+                    <td><h:message for="lname" style="color:red" /></td>
+                </tr>
+
+
+                <tr>
+                    <td />
+                    <td><h:commandButton value="Kayit" action="#{user.add}" /></td>
+                </tr>
+            </table>
+        </h:form>
+    </f:view>
+</h:body>
+</html>

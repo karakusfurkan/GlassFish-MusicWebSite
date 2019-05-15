@@ -1,0 +1,46 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml"   
+   xmlns:h = "http://java.sun.com/jsf/html"
+   xmlns:ui = "http://java.sun.com/jsf/facelets"> 
+   
+   <head>
+	<title>Mpotify online music platform</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <link rel="stylesheet" href="css/playerstyle.css"/>
+	<link href='//fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'/>
+</head>
+<h:body> 
+
+
+				             <ui:insert name = "navbar" >
+                                                <ui:include src = "navbar.xhtml" />
+                                             </ui:insert> 
+
+	
+	<div class="slider-bg">
+            		<ui:insert name = "player" >
+                                                <ui:include src = "player.xhtml" />
+                                             </ui:insert> 
+	</div>
+	<div class="content-bg">
+		<div class="wrap">
+			<div class="main">
+				<div class="content">
+                                              <ui:insert name = "content" >
+                                                <ui:include src = "defaultContent.xhtml" />
+                                             </ui:insert> 
+				</div>
+				
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+
+   
+   </h:body>
+</html>
